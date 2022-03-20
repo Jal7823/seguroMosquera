@@ -1,0 +1,40 @@
+:root {
+  --fColor: #112132;
+  --sColor: #335671;
+  --tColor: #6e90ad;
+  --tftColor: #8cafcc;
+}
+
+/* services */
+
+.bi-star {
+  color: var(--sColor);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* News */
+
+.img-news {
+  width: 300px;
+  height: auto;
+}
+
+/* Quote */
+
+.btn-primary {
+  background: var(--fColor);
+  border-color: var(--fColor);
+}
+
+/* footer */
+html,
+body {
+  height: 100%;
+}
+
+#page-content {
+  flex: 1 0 auto;
+}

@@ -1,0 +1,36 @@
+:root {
+  --fColor: #112132;
+  --sColor: #335671;
+  --tColor: #6e90ad;
+  --ftColor: #8cafcc;
+}
+
+.bg-principal {
+  background-color: var(--fColor);
+}
+
+.landing {
+  width: 100vh;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0.5;
+  position: relative;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  width: 65px;
+  height: auto;
+}
+
+.img-landing {
+  height: 100vh;
+  object-fit: cover;
+}
+
+/* efects */
