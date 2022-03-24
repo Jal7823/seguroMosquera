@@ -4,6 +4,7 @@ const schema = mongoose.Schema;
 const policiesSchema = new schema({
   name: String,
   descriptions: String,
+  img:String
 });
 
 //model

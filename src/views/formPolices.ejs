@@ -1,0 +1,37 @@
+<%- include('base') %>
+
+<div class="container mt-4 my-auto w-25">
+  <form action="/formPolice" method="POST" enctype="multipart/form-data">
+    <label for="name" class="form-label">Nombre</label>
+    <input
+      type="text"
+      name="name"
+      class="form-control"
+      id="name"
+      placeholder="Nombre de la imagen"
+    />
+
+    <label for="file" class="form-label">Imagen</label>
+    <input
+      name="imagenes"
+      type="file"
+      class="form-control"
+      placeholder="sube la imagen"
+    />
+
+    <label for="descripcion" class="form-label">Descripcion</label>
+    <textarea
+      class="form-control"
+      id="descripcion"
+      rows="3"
+      name="descriptions"
+    ></textarea>
+
+    <input
+      value="Guardar"
+      type="submit"
+      class="btn bg-principal text-white"
+      rows="3"
+    />
+  </form>
+</div>

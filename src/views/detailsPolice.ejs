@@ -1,8 +1,21 @@
 <%- include('base') %>
 
-<div class="container">
-    aca va el detalle
+<div class="container mt-4 mb-4">
+
+    <div class="row">
+        <div class="col-md">
+            <div class="card">
+                <div class="card-head">
+                    <div class="card-title"><%= policies.name %> </div>
+                </div>
+                <div class="card-body">
+                    <img src="<%= policies.img %> " alt="">
+                    <div class="card-text"><%= policies.descriptions %> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 
 
-<%- include('quote') %>
