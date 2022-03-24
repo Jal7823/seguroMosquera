@@ -49,4 +49,12 @@ router.post("/formPolice", async (req, res) => {
   res.redirect("/formPolice");
 });
 
+router.get("/quote", async (req, res) => {
+  const policiesDB = await policies.find();
+  res.render("quote", {
+    title: "Index",
+    policies: policiesDB,
+  });
+});
+
 module.exports = router;
