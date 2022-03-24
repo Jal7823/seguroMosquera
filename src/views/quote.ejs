@@ -2,32 +2,32 @@
 
 <div class="container bg-light animate__animated animate__backInUp mt-4">
     <h2 class="display-4 text-center" >Cotizacion</h2>
-    <form class="form-control" name="quotes">
+    <form class="form-control" name="quotes" action="/quote" method="POST">
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Nombre</label>
-          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nombre completo">
+          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nombre completo" name="name">
         </div>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Apellido</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Apellido completo">
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Apellido completo" name="lastName">
           </div>
         <div class="mb-3">
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Telefono/Whatsapp</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Telefono o whatsapp">
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Telefono o whatsapp" name="phone">
         </div>
         <p class=" m-2" >Que desea cotizar?</p>
 
 
-        <select class="form-select" aria-label="Default select example">
-            <option selected>Seleccione un opcion</option>
+        <select name="option"  class="form-select" aria-label="Default select example">
+            <option  selected>Seleccione un opcion</option>
             <% policies.forEach(el => { %>
-              <option value="1"><%= el.name %> </option>
+              <option  value="<%= el.name %> " ><%= el.name %> </option>
             <% }) %>
           </select>
             <div class="mb-3">
                 <label for="exampleFormControlTextarea1" class="form-label">Informacion adicional</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="tArea" ></textarea>
             </div>        
         <button type="submit" class="btn btn-primary">Cotizar</button>
       </form>

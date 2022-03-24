@@ -12,22 +12,22 @@
           <div class="carousel-item active">
             <img src="/img/1.jpg" class="d-block w-100 img-landing" alt="...">
             <div class="carousel-caption d-none d-md-block">
-              <h5 class="text-dark">First slide label</h5>
-              <p class="text-dark">Some representative placeholder content for the first slide.</p>
+              <h5 class="text-dark">Seguro de Hogar</h5>
+              <p class="text-dark">Potege el santuario de tu familia</p>
             </div>
           </div>
           <div class="carousel-item">
             <img src="/img/2.jpg" class="d-block w-100 img-landing" alt="...">
             <div class="carousel-caption d-none d-md-block">
-              <h5 class="text-dark">Second slide label</h5>
-              <p class="text-dark">Some representative placeholder content for the second slide.</p>
+              <h5 class="text-dark">Seguro de vehiculos</h5>
+              <p class="text-dark">Manejar con seguridad no tiene precio</p>
             </div>
           </div>
           <div class="carousel-item">
             <img src="/img/3.jpg" class="d-block w-100 img-landing" alt="...">
             <div class="carousel-caption d-none d-md-block">
-              <h5 class="text-dark">Third slide label</h5>
-              <p class="text-dark">Some representative placeholder content for the third slide.</p>
+              <h5 class="text-dark">Seguros otros</h5>
+              <p class="text-dark">Le damos el valor a todo lo que vale para ti!</p>
             </div>
           </div>
         </div>
@@ -60,40 +60,14 @@
 <%- include('policies') %>
 
 
-<div class="container bg-light animate__animated animate__backInLeft">
-  <h2 class="display-4 text-center" >Cotizacion</h2>
-  <form class="form-control" name="quotes">
-      <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Nombre</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nombre completo">
-      </div>
-      <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Apellido</label>
-          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Apellido completo">
-        </div>
-      <div class="mb-3">
-      <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Telefono/Whatsapp</label>
-          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Telefono o whatsapp">
-      </div>
-      <p class=" m-2" >Que desea cotizar?</p>
-
-
-      <select class="form-select" aria-label="Default select example">
-          <option selected>Seleccione un opcion</option>
-          <% policies.forEach(el => { %>
-            <option value="1"><%= el.name %> </option>
-          <% }) %>
-        </select>
-          <div class="mb-3">
-              <label for="exampleFormControlTextarea1" class="form-label">Informacion adicional</label>
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-          </div>        
-      <button type="submit" class="btn btn-primary">Cotizar</button>
-    </form>
+<div class="container d-flex justify-content-center aling-conter-center mt-4 mb-4" >
+  <a href="quote" class="bt btn-primary d-block w-100 rounded p-4 display-4 text-center" >Hacer cotizacion</a>
 </div>
 
 
+
+
+<%- include('companies') %>
 
 
 

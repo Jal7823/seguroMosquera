@@ -38,3 +38,14 @@ body {
 #page-content {
   flex: 1 0 auto;
 }
+
+
+
+
+/* companies */
+
+.companies{
+  object-fit: contain;
+  margin: auto;
+  
+}
