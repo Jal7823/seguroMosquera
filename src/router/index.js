@@ -19,11 +19,13 @@ router.get("/base", (req, res) => {
 router.get("/detail/:id", async (req, res) => {
   const id = req.params.id;
   try {
-    const policiesDB = await policies.findOne({ _id: id });
+    const policiesDB = await policies.find();
+    const policieDB = await policies.findOne({ _id: id });
     res.render("detailsPolice", {
       title: "Detalle de poliza",
+      policie: policieDB,
       policies: policiesDB,
-      error:false,
+      error: false,
     });
   } catch (err) {
     console.log(err);
@@ -40,7 +42,7 @@ router.post("/formPolice", async (req, res) => {
   const imagenesDB = new imagenes();
   imagenesDB.name = req.body.name;
   imagenesDB.descriptions = req.body.descriptions;
-  imagenesDB.img = '/img/uploads/'+req.file.filename;
+  imagenesDB.img = "/img/uploads/" + req.file.filename;
 
   await imagenesDB.save();
 

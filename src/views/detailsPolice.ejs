@@ -1,21 +1,24 @@
 <%- include('base') %>
 
-<div class="container mt-4 mb-4">
+<div class="container m-4 mx-auto">
+  <h3 class="display-4 text-center">Polizas</h3>
 
-    <div class="row">
-        <div class="col-md">
-            <div class="card">
-                <div class="card-head">
-                    <div class="card-title"><%= policies.name %> </div>
-                </div>
-                <div class="card-body">
-                    <img src="<%= policies.img %> " alt="">
-                    <div class="card-text"><%= policies.descriptions %> </div>
-                </div>
-            </div>
+  <!-- cards -->
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+      <div class="card h-100">
+        <img src="<%= policie.img %> " class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title text-center display-7"><%= policie.name %> </h5>
+          <a href="/detail/<%= policie.id %> " class="btn btn-primary d-block">+Info</a>
         </div>
+        <div class="card-footer">
+          <a href="" class="text-center">Consultar directa por whatsapp</a>
+        </div>
+      </div>
     </div>
-
+  </div>
 </div>
 
 
+<%- include('quote')  %> 
