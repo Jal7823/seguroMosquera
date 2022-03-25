@@ -33,4 +33,15 @@
   object-fit: cover;
 }
 
-/* efects */
+
+
+.whatsapp{
+  position: fixed;
+  color: #42C553;
+  border-radius: 23px;
+  bottom: 0;
+  right: 0;
+  padding:1rem;
+  z-index: 2000;
+  cursor:pointer;
+}
