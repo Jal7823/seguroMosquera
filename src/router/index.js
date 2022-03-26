@@ -8,7 +8,7 @@ router.get("/", async (req, res) => {
   const policiesDB = await policies.find();
 
   res.render("index", {
-    title: "Index",
+    title: "Seguro Mosquera",
     policies: policiesDB,
   });
 });
@@ -125,7 +125,7 @@ router.post("/formPolice", async (req, res) => {
 router.get("/quote", async (req, res) => {
   const policiesDB = await policies.find();
   res.render("quote", {
-    title: "Index",
+    title: "Cotizacion",
     policies: policiesDB,
   });
 });

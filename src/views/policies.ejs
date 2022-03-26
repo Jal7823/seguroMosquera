@@ -2,7 +2,7 @@
   <h3 class="display-4 text-center">Polizas</h3>
 
   <!-- cards -->
-  <div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="row row-cols-1 row-cols-md-4 g-4">
     <% policies.forEach(el => { %>
     <div class="col">
       <div class="card h-100">
@@ -10,9 +10,6 @@
         <div class="card-body">
           <h5 class="card-title text-center display-7"><%= el.name %> </h5>
           <a href="/detail/<%= el.id %> " class="btn btn-primary d-block">+Info</a>
-        </div>
-        <div class="card-footer">
-          <a href="" class="text-center">Consultar directa por whatsapp</a>
         </div>
       </div>
     </div>
