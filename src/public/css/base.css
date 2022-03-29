@@ -37,11 +37,18 @@
 
 .whatsapp{
   position: fixed;
+  background:var(--fColor);
   color: #42C553;
-  border-radius: 23px;
+  border-radius: 80% 0px 0px 0px;
   bottom: 0;
   right: 0;
-  padding:1rem;
+  padding:10px 10px 10px 20px;
   z-index: 2000;
   cursor:pointer;
+  transition: 1s;
+}
+
+.whatsapp:hover{
+  border-radius: 20% 0px 0px 0%;
+  
 }
