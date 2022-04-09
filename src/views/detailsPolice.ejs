@@ -1,19 +1,17 @@
 <%- include('base') %>
 
+<link rel="stylesheet" href="../public/css/details.css">
+
 <div class="container m-4 mx-auto">
-  <h3 class="display-4 text-center">Polizas</h3>
+  <h3 class="display-4 text-center"><%= policie.name %> </h3>
 
   <!-- cards -->
   <div class="row row-cols-12 row-cols-md-12 g-4">
     <div class="col">
-      <div class="card h-100">
-        <img src="<%= policie.img %> " class="card-img-top" alt="..." />
+      <div class="card h-100 bg-light border-0">
+        <img src="<%= policie.img %> " class="card-img-fluid mt-4 img-policie"/>
         <div class="card-body">
-          <h5 class="card-title text-center display-7"><%= policie.name %> </h5>
-          <p class="card-text"><%= policie.descriptions %> </p>
-        </div>
-        <div class="card-footer">
-          <a href="" class="text-center">Consultar directa por whatsapp</a>
+          <p class="card-text text-justify"><%= policie.descriptions %> </p>
         </div>
       </div>
     </div>

@@ -4,18 +4,8 @@ const policies = require("../../models/polices");
 const imagenes = require("../../models/polices");
 const nodemailer = require("nodemailer");
 
-router.get("/", async (req, res) => {
-  const policiesDB = await policies.find();
-
-  res.render("index", {
-    title: "Seguro Mosquera",
-    policies: policiesDB,
-  });
-});
-
-
+router.get("/",require('../controllers/pruebaRaiz') ); 
 router.post("/", async (req, res) => {
-
   //Creamos el objeto de transporte
   const transport = nodemailer.createTransport({
     host: "smtp.mailtrap.io",
@@ -30,9 +20,7 @@ router.post("/", async (req, res) => {
     from: "tucorreo@gmail.com",
     to: "mi-amigo@yahoo.com",
     subject: "Asunto Del Correo",
-    html: 
-    
-    `
+    html: `
 
     <style>
     
@@ -78,12 +66,8 @@ router.post("/", async (req, res) => {
     }
   });
   // const mensaje =`Nombre:${req.body.name}, Apellido:${req.body.lastName},Telefono:${req.body.phone}, informacion adicional:${req.body.tArea}`;
-  res.redirect('congratulations')
-
-
-
+  res.redirect("congratulations");
 });
-
 
 router.get("/base", (req, res) => {
   res.render("base", { title: "Base" });
@@ -146,9 +130,7 @@ router.post("/quote", (req, res) => {
     from: "tucorreo@gmail.com",
     to: "mi-amigo@yahoo.com",
     subject: "Asunto Del Correo",
-    html: 
-    
-    `
+    html: `
 
     <style>
     
@@ -194,12 +176,11 @@ router.post("/quote", (req, res) => {
     }
   });
   // const mensaje =`Nombre:${req.body.name}, Apellido:${req.body.lastName},Telefono:${req.body.phone}, informacion adicional:${req.body.tArea}`;
-  res.redirect('congratulations')
+  res.redirect("congratulations");
 });
 
-router.get('/congratulations',(req, res)=>[
-  res.render('congratulations',{title:'Felicidades!'})
-])
-
+router.get("/congratulations", (req, res) => [
+  res.render("congratulations", { title: "Felicidades!" }),
+]);
 
 module.exports = router;
